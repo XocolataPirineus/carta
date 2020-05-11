@@ -34,6 +34,14 @@ module.exports = {
       },
     },
     `gatsby-transformer-excel`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-166078632-1",
+        head: true,
+        anonymize: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
