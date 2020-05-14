@@ -52,15 +52,17 @@ class Articulo extends React.Component {
     return (
       <div>
         <div
-          style={{ fontFamily: 'Helvetica' }}
+          style={{ fontFamily: 'Helvetica', outline: "none" }}
           onClick={this.onClick}
           onKeyDown={this.onKeyDown}
           role="button"
-          tabIndex={1}
+          tabIndex={-1}
         >
           <FontAwesomeIcon
             icon={this.state.isSaved ? StarSolid : StarOutline}
             color={this.state.isSaved ? "auto" : "gray"}
+            style={{ marginBottom: "1px" }}
+            size="sm"
           />&nbsp;
         <strong>{this.state.data.castellano}{this.state.data.catalan ? " /" : ""}</strong> {this.state.data.catalan}
           <span> {currencyFormat(this.state.data.precio)}&nbsp;€</span>
