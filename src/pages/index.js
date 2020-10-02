@@ -19,12 +19,12 @@ function currencyFormat(num) {
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Carta" />
-    {data.allCartaXlsxHoja1.group.map(({ _, edges }) =>
-      <>
+    {data.allCartaXlsxHoja1.group.map(({ fieldValue, edges }) =>
+      <div key={fieldValue}>
         <h3 style={{ marginTop: 1.45 + 'rem', marginBottom: 0.45 + 'rem', fontFamily: 'Didot', fontWeight: "bold" }}>{edges[0].node.titulo_esp} / {edges[0].node.titulo_cat}</h3>
         <hr style={{ borderTop: '1px solid black' }} />
-        {edges.map(({ node }) => (<Articulo data={node} />))}
-      </>
+        {edges.map(({ node }) => <Articulo data={node} key={node.id} />)}
+      </div>
     )}
   </Layout>
 )
@@ -41,11 +41,12 @@ class Articulo extends React.Component {
     this.setState({ isSaved: JSON.parse(window.localStorage.getItem(this.key)) })
   }
 
-  componentWillUpdate(nextProps, nextState) {
-    window.localStorage.setItem(this.key, JSON.stringify(nextState.isSaved));
+  onClick = () => {
+    var isSaved = !this.state.isSaved;
+    window.localStorage.setItem(this.key, JSON.stringify(isSaved));
+    this.setState({ isSaved: isSaved })
   }
 
-  onClick = () => { this.setState({ isSaved: !this.state.isSaved }) }
   onKeyDown = (event) => { if (event.keyCode === 13) { this.onClick() } }
 
   render() {
@@ -73,7 +74,7 @@ class Articulo extends React.Component {
             {this.state.data.especificacion}
           </div>
         }
-      </div >
+      </div>
     );
   }
 }
@@ -85,6 +86,7 @@ export const query = graphql`
       fieldValue
       edges {
         node {
+          id
           castellano
           catalan
           especificacion
