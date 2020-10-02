@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{ marginTop: 30, textAlign: 'center' }}>
+        <footer style={{ marginTop: 30, textAlign: "center" }}>
           © Xocolata Pirineus {new Date().getFullYear()}
         </footer>
       </div>
@@ -48,14 +48,25 @@ const CookiesConsent = () => (
   <>
     <div className="cookiealert">
       <div className="cookiealert-container">
-        <b>Te gustan las cookies?</b> 🍪 Nosotros utilizamos las cookies para asegurarnos tu mejor experiencia en nuesta web. <a href="https://cookiesandyou.com/" target="_blank" rel="noopener noreferrer">Leer más...</a> <button className="acceptcookies" type="button" aria-label="Cerrar">Acepto</button>
+        <b>Te gustan las cookies?</b> 🍪 Nosotros utilizamos las cookies para
+        asegurarnos tu mejor experiencia en nuesta web.{" "}
+        <a
+          href="https://cookiesandyou.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Leer más...
+        </a>{" "}
+        <button className="acceptcookies" type="button" aria-label="Cerrar">
+          Acepto
+        </button>
       </div>
     </div>
     <Helmet>
-      <script src={withPrefix('cookiealert.js')} type="text/javascript" />
+      <script src={withPrefix("cookiealert.js")} type="text/javascript" />
     </Helmet>
   </>
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

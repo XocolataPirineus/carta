@@ -10,7 +10,7 @@ const Header = ({ siteTitle }) => (
   >
     <div
       style={{
-        textAlign: 'center',
+        textAlign: "center",
       }}
     >
       <Image />
