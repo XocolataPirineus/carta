@@ -65,9 +65,9 @@ const CookiesConsent = () => (
     <Helmet
       script={[
         {
-          "src": withPrefix("cookiealert.js"),
-          "type": "text/javascript"
-        }
+          src: withPrefix("cookiealert.js"),
+          type: "text/javascript",
+        },
       ]}
     />
   </>
