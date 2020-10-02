@@ -62,9 +62,14 @@ const CookiesConsent = () => (
         </button>
       </div>
     </div>
-    <Helmet>
-      <script src={withPrefix("cookiealert.js")} type="text/javascript" />
-    </Helmet>
+    <Helmet
+      script={[
+        {
+          src: withPrefix("cookiealert.js"),
+          type: "text/javascript",
+        },
+      ]}
+    />
   </>
 )
 
