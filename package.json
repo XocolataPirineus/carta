@@ -15,7 +15,7 @@
     "gatsby-plugin-manifest": "^2.4.33",
     "gatsby-plugin-offline": "^3.2.30",
     "gatsby-plugin-react-helmet": "^3.3.12",
-    "gatsby-plugin-sharp": "^2.6.38",
+    "gatsby-plugin-sharp": "^2.6.39",
     "gatsby-source-filesystem": "^2.3.32",
     "gatsby-transformer-excel": "^2.4.13",
     "gatsby-transformer-sharp": "^2.5.16",
