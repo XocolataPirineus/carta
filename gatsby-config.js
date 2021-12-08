@@ -36,11 +36,11 @@ module.exports = {
     },
     `gatsby-transformer-excel`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: "UA-166078632-1",
-        head: true,
-        anonymize: true,
+        trackingIds: [
+          "UA-166078632-1",
+        ],
       },
     },
     `gatsby-plugin-fontawesome-css`,
