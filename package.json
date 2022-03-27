@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
-    "prettier": "2.6.0"
+    "prettier": "2.6.1"
   },
   "keywords": [
     "gatsby"
