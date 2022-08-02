@@ -22,7 +22,7 @@
     "gatsby-transformer-sharp": "^2.12.1",
     "prop-types": "^15.8.1",
     "react": "^16.14.0",
-    "react-cookie-consent": "^7.6.0",
+    "react-cookie-consent": "^8.0.1",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0"
   },
