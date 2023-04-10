@@ -1,29 +1,23 @@
-import PropTypes from "prop-types"
 import React from "react"
-import Image from "../components/image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      marginBottom: `1.45rem`,
+      margin: `0`,
+      padding: `var(--space-4) var(--size-gutter)`,
+      display: `flex`,
+      alignItems: `center`,
+      justifyContent: `center`,
     }}
   >
-    <div
-      style={{
-        textAlign: "center",
-      }}
-    >
-      <Image />
-    </div>
+    <StaticImage
+      src="../images/logo.png"
+      alt={siteTitle}
+      width={200}
+      placeholder="blurred"
+    />
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

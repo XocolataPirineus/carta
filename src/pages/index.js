@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { graphql } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar as StarOutline } from "@fortawesome/free-regular-svg-icons"
@@ -16,7 +16,6 @@ function currencyFormat(num) {
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Carta" />
     {data.allCartaXlsxHoja1.group.map(({ fieldValue, edges }) => (
       <div key={fieldValue}>
         <h3
@@ -106,7 +105,7 @@ class Articulo extends React.Component {
 export const query = graphql`
   {
     allCartaXlsxHoja1 {
-      group(field: titulo_order) {
+      group(field: { titulo_order: SELECT }) {
         fieldValue
         edges {
           node {
@@ -123,5 +122,7 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = () => <Seo title="Carta" />
 
 export default IndexPage
