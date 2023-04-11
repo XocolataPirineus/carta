@@ -1,9 +1,13 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import CookieConsent from "react-cookie-consent"
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 
 import Header from "./header"
 import "./layout.css"
+
+config.autoAddCss = false
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
