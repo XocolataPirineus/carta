@@ -14,7 +14,7 @@
     "gatsby-plugin-google-gtag": "^5.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-offline": "^6.8.0",
-    "gatsby-plugin-sharp": "^5.8.0",
+    "gatsby-plugin-sharp": "^5.8.1",
     "gatsby-source-filesystem": "^5.8.0",
     "gatsby-transformer-excel": "^5.8.0",
     "gatsby-transformer-sharp": "^5.8.0",
