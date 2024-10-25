@@ -23,7 +23,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.2.0",
     "prettier": "3.3.3"
   },
   "license": "MIT",
